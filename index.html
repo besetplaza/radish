@@ -1,0 +1,63 @@
+<!DOCTYPE html lang="ja">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Cache-Control" content="no-store">
+	<meta name="robots" content="noindex,nofollow,noarchive" />
+	<meta name="viewport" content="width=device-width">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.ganttView.css?20231206" />
+	<link rel="stylesheet" type="text/css" href="css/bp.css?20240320" />
+	<link rel="shortcut icon" href="image/favicon.ico">
+	<script type="text/javascript" charset="utf-8" src="js/date.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/holidays.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/jquery.ganttView.js?20240320"></script>
+	<script type="text/javascript" charset="utf-8" src="data/202311.js"></script>
+	<script type="text/javascript" charset="utf-8" src="data/202312.js?20231225"></script>
+	<script type="text/javascript" charset="utf-8" src="data/202401.js?20240106"></script>
+	<script type="text/javascript" charset="utf-8" src="data/202402.js?20240204"></script>
+	<script type="text/javascript" charset="utf-8" src="data/202403.js?20240308"></script>
+	<script type="text/javascript" charset="utf-8" src="data/202404.js?20240408"></script>
+	<script type="text/javascript" charset="utf-8" src="js/bp.js?20240408"></script>
+	<title>シフト表</title>
+</head>
+<body>
+<div class="container">
+	<header class="header">
+		<div class="header__inner">
+			<h1 class="header__title">
+				<img src="image/beset-plaza_logo_short.jpg" alt="Be-set Plaza" />
+			</h1>
+			<a class="btn btn-radius-solid" id="info"><img src="image/Information.png" alt="新着情報" class="button-image" /></a>
+			<a class="btn btn-radius-solid" id="cafe"><img src="image/Cafe.png" alt="カフェ" class="button-image" /></a>
+			<a class="btn btn-radius-solid" id="total"><img src="image/Calculator.png" alt="集計" class="button-image" /></a>
+			<a class="btn btn-radius-solid" id="export"><img src="image/ExcelFile.png" alt="ダウンロード" class="button-image" /></a>
+			<select id="target_month"></select>
+		</div>
+	</header>
+	<main>
+		<div class="main">
+			<div id="ganttChart"></div>
+		</div>
+	</main>
+	<footer class="footer">
+		<div>&copy;Copyright Be-set Plaza. 2023.</div>
+	</footer>
+	<div id="modalImgDlg" style="display:none;">
+		<div>
+			<img id="cafeCalendar" alt="カレンダー" width="100%" />
+		</div>
+	</div>
+	<div id="modalSumDlg" style="display:none;">
+		<div>
+			<p style="text-align: right;">(順不同)</p>
+			<table id="totalTable" width="100%" align="center"></table>
+		</div>
+	</div>
+	<div id="modalInfDlg" style="display:none;">
+	</div>
+</div>
+</body>
+</html>

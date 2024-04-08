@@ -1,0 +1,172 @@
+html{
+	font-size: 0.7em;
+	font-family: "Arial", "メイリオ";
+	overflow-y: scroll;		/* エレメント作成前の幅算出でスクロールバー分が必要なため */
+}
+
+*, *:before, *:after {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+
+.btn, a.btn, button.btn {
+	line-height: 1.5;
+	position: relative;
+	display: inline-block;
+	padding: 0.1rem;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 0.5rem;
+	width: 2rem;
+	height: 2rem;
+}
+
+a.btn-radius-solid {
+	border: 1px solid #ccc;
+	background: #f1e767;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fdfbfb), to(#ebedee));
+	background: -webkit-linear-gradient(top, #fdfbfb 0%, #ebedee 100%);
+	background: linear-gradient(to bottom, #fdfbfb 0%, #ebedee 100%);
+	-webkit-box-shadow: inset 1px 1px 1px #fff;
+	box-shadow: inset 1px 1px 1px #fff;
+}
+
+a.btn-radius-solid:hover {
+	background: -webkit-gradient(linear, left bottom, left top, from(#fdfbfb), to(#ebedee));
+	background: -webkit-linear-gradient(bottom, #fdfbfb 0%, #ebedee 100%);
+	background: linear-gradient(to top, #fdfbfb 0%, #ebedee 100%);
+}
+
+img.button-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#ganttChart {
+	padding: 45px 0px 20px 0px;
+}
+
+#totalTable table {
+	border-collapse: collapse;
+	border: solid 2px #444;
+}
+
+#totalTable td{
+	text-align: center;
+	border: solid 1px #888;
+	padding: 6px;
+}
+
+/* 調整用スタイル */
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+
+main {
+  /*background-color: #f1f1f1;*/
+  /*height: 800px;*/
+  /*display: flex;*/
+  display: block;
+}
+
+
+.main {
+  /*margin: auto;*/
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+.footer {
+  /*background-color: #f6f6f6;*/
+  /*height: 200px;*/
+  /*display: flex;*/
+  display: block;
+}
+
+.footer div {
+  margin: auto;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+
+
+/* ヘッダー */
+
+
+.header {
+  background-color: #fff;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.header__inner {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: inherit;
+  position: relative;
+}
+
+
+/* ヘッダーのロゴ部分 */
+.header__title {
+  width: 50px;
+}
+
+
+@media screen and (min-width: 960px) {
+  .header__title {
+    width: 50px;
+  }
+}
+
+.header__title img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* 新着情報リスト */
+ul{
+  width: 100%;
+}
+
+li{
+  display: flex;
+  padding-bottom:10px;
+}
+
+div.day{
+  margin-right:5px;
+}
+
+div.label,.new:before {
+  content: "New!";
+  color:red;
+}
+
+div.text{
+  margin-left:5px;
+}
